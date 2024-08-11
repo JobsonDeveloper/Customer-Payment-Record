@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Payment Record - Página principal.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Concert+One&family=DM+Serif+Text&family=Mate+SC&family=Press+Start+2P&family=Ultra&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/paginaPrincipal.css">
+	<link rel="shortcut icon" href="../Icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<!--POPPUP PARA ADICIONAR UM NOVO PARAGMENTO-->
+	<dialog id="dialogAddPag">
+		<!--POPPUP QUE MOSTRA MENSÁGEM SOBRE A ADIÇÃO DE UM NOVO PAGAMENTO-->
+		<dialog id="MensagensSobreAddPag">
+			<div id="mensagensNovPag">
+				
+			</div>
+		</dialog>
+		<!--DIV PARA ADICIONAR UM NOVO PAGAMENTO-->
+		<div id='AddPagamento'>
+			<div id='imgFechar'>
+				<img id='fechar' src='https://cdn.iconscout.com/icon/free/png-256/free-x-50-433185.png' alt=''>
+			</div>
+            <h2>ADICIONAR NOVO PAGAMENTO</h2>
+			<div id="entradasNovPag">
+				<label for="">Nome do cliente:</label>
+                <input type='text' name='cliente' placeholder="" id='cliente'>
+				<label for="">Vencimento do boleto:</label>
+                <input type='datetime' name='vencimento' id='vencimento'>
+				<label for="">Data do pagamento:</label>
+                <input type='datetime' name='pagamento' id='pagamento'>
+				<label for="">Valor recolhido:</label>
+                <input type='number' name='valor' placeholder="" id='valor'>
+				<label for="">Forma de pagamento:</label>
+				<select name='forma' id='forma'>
+					<option value='Pix'>Pix</option>
+        			<option value='Espécie'>Espécie</option>
+					<option value='Débito'>Débito</option>
+        			<option value='Crédito 1X'>Crédito 1X</option>
+					<option value='Crédito 2X'>Crédito 2X</option>
+					<option value='Crédito 3X'>Crédito 3X</option>
+        		</select>
+            </div>
+			<div id='butttons'>
+				<button id='apagar'>Apagar</button>
+				<button id='salvar'>Salvar</button>
+			</div>
+		</div>
+	</dialog>
+
+	<!--POPPUP QUA APARECE ANTES DE FECHAR O SITE-->
+	<dialog id="saindoDoSite">
+		<div id="mensagem">
+			<h1>Você saiu do site.</h1>
+		</div>
+	</dialog>
+	<!----------------------TOPO DO SITE----------------------------->
+	<div id="topo">
+		<div id="logo">
+			<img src="../Icones/logoOFC.png" alt="logo do site">
+		</div>
+		<div id="nomeSite">
+			<h1>CUSTOMER PAYMENT RECORD</h1>
+		</div>
+		<div id="infoPessoais">
+			<label><h3>Nome:&nbsp</h3></label>
+			<label><h3>Login:&nbsp</h3></label>
+			<label><h3>Data de nascimento:&nbsp</h3></label>
+			<label><h3>Gênero:&nbsp</h3></label>
+		</div>
+		<div id="buttonSair">
+			<button id="sair"><img src="https://cdn-icons-png.flaticon.com/128/660/660350.png" alt=""></button>
+		</div>
+	</div>
+	<!----------------------MEIO DO SITE----------------------------->
+	<div id="meio">
+		<button id="RegistPag">REGISTRAR NOVO PAGAMENTO</button>
+		<div id="pagamentos">
+			<table id="tablePagamentos">
+					<theade>
+						<th>Id:</th>
+						<th>Cliente:</th>
+						<th>Vencimento:</th>
+						<th>Pagamento:</th>
+						<th>Valor:</th>
+						<th>Forma:</th>
+						<th id="opcoes">Opções:</th>
+					</theade>
+					<tbody id="tbody">
+					</tbody>
+			</table>
+		</div>
+	</div>
+	<!----------------------RODAPÉ DO SITE----------------------------->
+	<div id="final">
+		<h4><h3>Criador do site:&nbsp</h3>Jobson de OLiveira Coutinho</h4>
+	</div>
+	<script type="text/javascript" src="../JavaScript/paginaPrincipal.js"></script>
+</body>
+</html>
